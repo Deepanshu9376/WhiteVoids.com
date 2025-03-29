@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home";
 import SignIn from "./Screens/Signin";
 import Navbar from "./Components/Navbar";
+import ContactUs from "./Screens/contact";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          
         </Routes>
       </div>
     </Router>
