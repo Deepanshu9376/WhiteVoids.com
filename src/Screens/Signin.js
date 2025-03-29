@@ -32,7 +32,7 @@ const SignIn = () =>  {
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+           Test Screen bar.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
