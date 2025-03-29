@@ -1,10 +1,72 @@
 import React from "react";
-import bgImage from "../assests/image.png";
-import bgImage2 from "../assests/download2.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuestionCircle, faPaste } from "@fortawesome/free-solid-svg-icons";
+import { faSafari } from "@fortawesome/free-brands-svg-icons";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; 
+import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import ExampleCarouselImage from '../assests/image.png';
 
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return <FaArrowLeft className="arrow left" onClick={onClick} />;
+};
+
+// Custom Right Arrow
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return <FaArrowRight className="arrow right" onClick={onClick} />;
+};
 const Home = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+    nextArrow: <NextArrow />, // Custom right arrow
+    prevArrow: <PrevArrow />, // Custom left arrow
+  };
+  
+
+  const slides = [
+    {
+      id: 1,
+      image: "https://www.whitevoids.com/web/image/834-62b713f7/abstract-1920x1080-blackboard-wallpaper-preview.webp",
+      title: "Harness the Power of Intellectual Property",
+      description:
+        "PatSol delves into extensive patent literature to identify industry-specific solutions tailored to your needs...",
+    },
+    {
+      id: 2,
+      image: "https://www.whitevoids.com/unsplash/sfL_QOnmy00/835/library.jpg?unique=8cfc5263",
+      title: "Unlock Innovation with AI-Powered Insights",
+      description:
+        "Our AI-driven tools help uncover strategies and technologies that can solve pressing industry challenges...",
+    },
+    {
+      id: 3,
+      image: "https://www.whitevoids.com/web/image/website.s_carousel_default_image_3",
+      title: "Unloc Insights",
+      description:
+        "Our AI-driven tools help uncover strategies and technologies that can solve pressing industry challenges...",
+    },
+  ];
+
   return (
     <>
+    {/* First div */}
       <div
         style={{
           padding: "50px",
@@ -25,16 +87,18 @@ const Home = () => {
           zIndex: 1,
         }}
       >
-        <h1 style={{ fontSize: "84px" }}>
+        <h1 style={{ fontSize: "64px" }}>
           Let AI Solve Your Industry Problems
         </h1>
-        <p style={{ fontSize: "28px" }}>
+        <p style={{ fontSize: "18px" }}>
           Unlock the power of artificial intelligence to tackle your most
           complex challenges. PatSol leverages cutting-edge AI to analyze vast
           amounts of patent and scientific literature, delivering tailored
           solutions that drive innovation and efficiency.
         </p>
       </div>
+
+      {/* Second Div */}
       <div
         style={{
           position: "relative",
@@ -83,17 +147,19 @@ const Home = () => {
         </div>
 
         {/* Text Content */}
-        <h1 style={{ fontSize: "84px", textAlign: "center", width: "100%" }}>
+        <h1 style={{ fontSize: "64px", textAlign: "center", width: "100%" }}>
           Seeking Solutions ?{" "}
         </h1>
-        <p style={{ fontSize: "28px", textAlign: "center", width: "100%" }}>
+        <p style={{ fontSize: "18px", textAlign: "center", width: "100%" }}>
           Look no further. Enter your industry-related problem and let
           Whitevoids AI do the heavy lifting.
-       <br/>
+          <br />
           Our AI-driven tool provides actionable insights and technical
           solutions, empowering you to stay ahead in a competitive landscape.
         </p>
       </div>
+
+      {/* Third div */}
       <div
         style={{
           position: "relative",
@@ -142,22 +208,45 @@ const Home = () => {
         </div>
 
         {/* Text Content */}
-        <h1 style={{ fontSize: "84px", textAlign: "center", width: "100%" }}>
+        <h1
+          style={{
+            fontSize: "64px",
+            textAlign: "center",
+            width: "100%",
+            color: "black",
+          }}
+        >
           PatSol
         </h1>
-        <p style={{ fontSize: "28px", textAlign: "center", width: "100%" }}>
+        <p
+          style={{
+            fontSize: "18px",
+            textAlign: "center",
+            width: "100%",
+            color: "black",
+          }}
+        >
           Introducing PATSOL – your AI-powered partner in problem-solving and
           innovation.
         </p>
-        <p style={{ fontSize: "28px", textAlign: "center", width: "100%" }}>
+        <p
+          style={{
+            fontSize: "18px",
+            textAlign: "center",
+            width: "100%",
+            color: "black",
+          }}
+        >
           PatSol is an advanced AI-based tool designed to extract solutions to
           complex industry problems by analyzing patent literature and other
-          scientific sources. Whether you’re facing technical challenges,
-          seeking competitive insights, or aiming to benchmark your progress,
-          PatSol provides the answers you need.
+          scientific sources. Whether
+          <br /> you’re facing technical challenges, seeking competitive
+          insights, or aiming to benchmark your progress, PatSol provides the
+          answers you need.
         </p>
       </div>
 
+      {/* Fourth div */}
       <div
         style={{
           display: "flex",
@@ -170,7 +259,7 @@ const Home = () => {
         <div style={{ flex: "1" }}>
           <h1
             style={{
-              fontSize: "60px",
+              fontSize: "64px",
               fontWeight: "Normal",
               marginLeft: "120px",
               color: "rgb(19,117,88)",
@@ -273,6 +362,126 @@ const Home = () => {
           />
         </div>
       </div>
+
+      {/* Fifth div */}
+      <div
+        style={{
+          backgroundColor: "rgb(184, 203, 230)",
+          paddingTop: "140px",
+          paddingBottom: "140px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "320px",
+            gap: "40px",
+          }}
+        >
+          <div className="flex flex-col items-center">
+            <div
+              style={{
+                width: "50px",
+                borderRadius: "12px",
+                backgroundColor: "#20C997",
+                padding: "20px",
+                marginLeft: "142px",
+              }}
+            >
+              <FontAwesomeIcon icon={faQuestionCircle} size="3x" />
+            </div>
+            <h2 style={{ textAlign: "center" }}>Define Your Challenge</h2>
+            <p
+              className="text-lg font-semibold mt-2"
+              style={{ textAlign: "center" }}
+            >
+              Clearly outline your industry-specific challenge. PatSol’s <br />
+              advanced AI will analyze your input to identify key issues <br />
+              and parameters, setting the stage for precise and effective <br />
+              solutions.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div
+              style={{
+                width: "50px",
+                borderRadius: "12px",
+                backgroundColor: "#20C997",
+                padding: "20px",
+                marginLeft: "142px",
+              }}
+            >
+              <FontAwesomeIcon icon={faSafari} size="3x" />
+            </div>
+            <h2 style={{ textAlign: "center" }}>
+              Discover AI-Powered Solutions
+            </h2>
+            <p
+              className="text-lg font-semibold mt-2"
+              style={{ textAlign: "center" }}
+            >
+              Explore a range of AI-generated solutions tailored to your <br />{" "}
+              problem. Each solution is backed by extensive patent and <br />{" "}
+              scientific research, ensuring relevance and reliability.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div
+              style={{
+                width: "50px",
+                borderRadius: "12px",
+                backgroundColor: "#20C997",
+                padding: "20px",
+                marginLeft: "142px",
+              }}
+            >
+              <FontAwesomeIcon
+                className="items-center"
+                icon={faPaste}
+                size="3x"
+              />
+            </div>
+            <h2 style={{ textAlign: "center" }}>Unlock Actionable Insights</h2>
+            <p
+              className="text-lg font-semibold mt-2"
+              style={{ textAlign: "center" }}
+            >
+              Gain immediate access to detailed, AI-driven insights. <br />{" "}
+              Download comprehensive reports that not only solve your <br />{" "}
+              problem but also provide competitive and sustainable <br />{" "}
+              strategies for long-term success.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Sixth div */}
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+       <img src={ExampleCarouselImage} alt="Umasge"/> 
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={ExampleCarouselImage} alt="Umasge"/> 
+      <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={ExampleCarouselImage} alt="Umasge"/> 
+      <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
     </>
   );
 };
