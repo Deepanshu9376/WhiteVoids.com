@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home";
 import SignIn from "./Screens/Signin";
 import Navbar from "./Components/Navbar";
-
+import './App.css';
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
         </Routes>
       </div>
+      
     </Router>
   );
 }
