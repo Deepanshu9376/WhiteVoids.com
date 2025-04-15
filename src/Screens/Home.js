@@ -101,6 +101,8 @@ const Home = () => {
       {/* Second Div */}
       <div
         style={{
+          margin:0,
+          padding:0,
           position: "relative",
           width: "100%",
           height: "70vh",
@@ -108,7 +110,7 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "flex-start",
+          alignItems: "center",
           color: "white",
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
           paddingLeft: "10%",
@@ -212,7 +214,7 @@ const Home = () => {
           style={{
             fontSize: "64px",
             textAlign: "center",
-            width: "100%",
+            width: "85%",
             color: "black",
           }}
         >
@@ -222,7 +224,7 @@ const Home = () => {
           style={{
             fontSize: "18px",
             textAlign: "center",
-            width: "100%",
+            width: "85%",
             color: "black",
           }}
         >
@@ -233,7 +235,7 @@ const Home = () => {
           style={{
             fontSize: "18px",
             textAlign: "center",
-            width: "100%",
+            width: "85%",
             color: "black",
           }}
         >
@@ -261,7 +263,7 @@ const Home = () => {
             style={{
               fontSize: "64px",
               fontWeight: "Normal",
-              marginLeft: "120px",
+              marginLeft: "10px",
               color: "rgb(19,117,88)",
             }}
           >
@@ -271,7 +273,7 @@ const Home = () => {
             style={{
               fontSize: "18px",
               lineHeight: "1.6",
-              marginLeft: "120px",
+              marginLeft: "10px",
               color: "#333",
             }}
           >
@@ -291,7 +293,7 @@ const Home = () => {
           </p>
           <div
             className="s_hr pb32 pt4 "
-            style={{ marginLeft: "120px", width: "550px" }}
+            style={{ marginLeft: "px", width: "550px" }}
             data-snippet="s_hr"
             data-name="Separator"
           >
@@ -317,7 +319,7 @@ const Home = () => {
         {/* Right Image Section */}
         <div
           style={{
-            flex: "1",
+            flex: "0",
             position: "relative",
             display: "flex",
             justifyContent: "center",
@@ -328,7 +330,7 @@ const Home = () => {
             alt="Microscope"
             style={{
               width: "450px",
-              height: "700px",
+              height: "600px",
               borderRadius: "10px",
               position: "relative",
               zIndex: 1,
@@ -338,12 +340,12 @@ const Home = () => {
             src="https://www.whitevoids.com/unsplash/6xeDIZgoPaw/oil%20industry.jpg?unique=86f54a5d"
             alt="Factory"
             style={{
-              width: "350px",
-              height: "350px",
+              width: "300px",
+              height: "300px",
               borderRadius: "10px",
               position: "absolute",
               bottom: "-40px",
-              right: "520px",
+              right: "500px",
               zIndex: 2,
             }}
           />
@@ -351,12 +353,12 @@ const Home = () => {
             src="https://www.whitevoids.com/web/image/website.s_banner_default_image_3"
             alt="Books"
             style={{
-              width: "220px",
-              height: "320px",
+              width: "250px",
+              height: "300px",
               borderRadius: "10px",
               position: "relative",
-              top: "90px",
-              right: "80px",
+              top: "25px",
+              right: "60px",
               zIndex: 2,
             }}
           />
@@ -375,7 +377,7 @@ const Home = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            marginLeft: "320px",
+            marginLeft: "10px",
             gap: "40px",
           }}
         >
@@ -386,7 +388,7 @@ const Home = () => {
                 borderRadius: "12px",
                 backgroundColor: "#20C997",
                 padding: "20px",
-                marginLeft: "142px",
+                marginLeft: "200px",
               }}
             >
               <FontAwesomeIcon icon={faQuestionCircle} size="3x" />
@@ -396,9 +398,9 @@ const Home = () => {
               className="text-lg font-semibold mt-2"
               style={{ textAlign: "center" }}
             >
-              Clearly outline your industry-specific challenge. PatSol’s <br />
-              advanced AI will analyze your input to identify key issues <br />
-              and parameters, setting the stage for precise and effective <br />
+              Clearly outline your industry-specific challenge. <br />
+              PatSol’s advanced AI will analyze your input to identify<br /> key issues 
+              and parameters,setting the stage for precise and effective 
               solutions.
             </p>
           </div>
@@ -409,7 +411,7 @@ const Home = () => {
                 borderRadius: "12px",
                 backgroundColor: "#20C997",
                 padding: "20px",
-                marginLeft: "142px",
+                marginLeft: "175px",
               }}
             >
               <FontAwesomeIcon icon={faSafari} size="3x" />
@@ -421,8 +423,8 @@ const Home = () => {
               className="text-lg font-semibold mt-2"
               style={{ textAlign: "center" }}
             >
-              Explore a range of AI-generated solutions tailored to your <br />{" "}
-              problem. Each solution is backed by extensive patent and <br />{" "}
+              Explore a range of AI-generated solutions tailored to your
+              problem. <br /> Each solution is backed by extensive<br /> patent and 
               scientific research, ensuring relevance and reliability.
             </p>
           </div>
@@ -433,7 +435,7 @@ const Home = () => {
                 borderRadius: "12px",
                 backgroundColor: "#20C997",
                 padding: "20px",
-                marginLeft: "142px",
+                marginLeft: "200px",
               }}
             >
               <FontAwesomeIcon
@@ -447,9 +449,9 @@ const Home = () => {
               className="text-lg font-semibold mt-2"
               style={{ textAlign: "center" }}
             >
-              Gain immediate access to detailed, AI-driven insights. <br />{" "}
-              Download comprehensive reports that not only solve your <br />{" "}
-              problem but also provide competitive and sustainable <br />{" "}
+              Gain immediate access to detailed, AI-driven insights. 
+              Download comprehensive<br />  reports that not only solve your 
+              problem <br /> but also provide competitive and sustainable 
               strategies for long-term success.
             </p>
           </div>
